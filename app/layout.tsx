@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "JaneAndDoe Wedding",
+  title: "Jane and John Wedding",
   description: "Jane and John are getting married!",
   applicationName: "The WedDev Team",
   authors: [{ name: "The WedDev Team", url: "https://mrklwnc.vercel.app" }],
@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfairDisplay.variable} ${greatVibes.variable} ${inter.variable} antialiased text-white`}
+        className={`${playfairDisplay.variable} ${greatVibes.variable} ${inter.variable} antialiased`}
       >
         {children}
       </body>
