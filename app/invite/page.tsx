@@ -2,13 +2,16 @@ import Image from "next/image";
 
 import Hero from "@/components/hero";
 import { Button } from "@/components/ui/button";
+import WeddingTimeline from "@/components/wedding-timeline";
 
 export default function Invitation() {
   return (
     <div className="min-h-screen font-playfair-display">
-      <Hero />
+      <main>
+        <Hero />
+      </main>
 
-      <section className="flex items-center justify-center gap-5 bg-[url('/hero/hero-0.jpg')] px-4 py-22 lg:py-24 bg-cover bg-center lg:gap-28">
+      <section className="flex items-center justify-center gap-5 bg-[url('/hero/hero-0.jpg')] px-4 py-22 lg:px-8 lg:py-24 bg-cover bg-center lg:gap-28">
         <CoupleCard
           url="/couple/groom.jpg"
           name="John Doe"
@@ -23,8 +26,8 @@ export default function Invitation() {
       </section>
 
       <section className="p-4 space-y-2">
-        <div className="flex">
-          <div className="relative w-56">
+        <div className="flex min-h-[180px]">
+          <div className="relative w-56 md:w-72 lg:w-1/3">
             <Image
               src="/others/church.webp"
               alt="Saint Anthony Abbot Parish Church"
@@ -33,32 +36,37 @@ export default function Invitation() {
             />
           </div>
 
-          <div className="bg-custom-primary p-2 space-y-2 text-sm flex-1">
-            <div className="uppercase text-white">
-              <h3>Saint Anthony Abbot Parish Church</h3>
+          <div className="bg-custom-primary p-2 md:p-4 space-y-2 text-sm flex-1">
+            <div className="uppercase text-white md:text-xl lg:text-2xl">
+              <h3 className="md:text-2xl lg:3xl">
+                Saint Anthony Abbot Parish Church
+              </h3>
               <p>12:30 PM</p>
               <p>Jan 10, 2026</p>
             </div>
 
-            <Button className="bg-custom-primary-4 rounded-none text-black hover:bg-white ">
+            <Button className="bg-custom-primary-4 rounded-none text-black hover:bg-white text-base">
               Get Directions
             </Button>
           </div>
         </div>
-        <div className="flex">
-          <div className="bg-custom-secondary-2 p-2 space-y-2 text-sm flex-1">
-            <div className="uppercase text-white">
-              <h3>E Jose Events Place & Resort</h3>
+
+        <div className="flex min-h-[180px]">
+          <div className="bg-custom-secondary-2 p-2 md:p-4 space-y-2 text-sm flex-1">
+            <div className="uppercase text-white md:text-xl lg:text-2xl">
+              <h3 className="md:text-2xl lg:3xl">
+                E Jose Events Place & Resort
+              </h3>
               <p>3:00 PM</p>
               <p>Jan 10, 2026</p>
             </div>
 
-            <Button className="bg-custom-primary-4 rounded-none text-black hover:bg-white ">
+            <Button className="bg-custom-primary-4 rounded-none text-black hover:bg-white text-base">
               Get Directions
             </Button>
           </div>
 
-          <div className="relative w-56">
+          <div className="relative w-56 md:w-72 lg:w-1/3">
             <Image
               src="/others/reception.webp"
               alt="E Jose Events Place & Resort"
@@ -68,6 +76,8 @@ export default function Invitation() {
           </div>
         </div>
       </section>
+
+      <WeddingTimeline />
     </div>
   );
 }
