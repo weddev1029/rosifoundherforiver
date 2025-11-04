@@ -3,12 +3,12 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="h-screen font-playfair-display bg-[url('/hero/hero-0.jpg')] bg-cover bg-center ">
-      <div className="h-screen w-full grid place-content-center backdrop-brightness-50">
+    <div className="h-screen font-playfair-display bg-[url('/hero/hero-0.jpg')] bg-cover bg-center">
+      <div className="h-screen w-full grid place-content-center backdrop-brightness-50 text-white">
         <div className="grid place-items-center text-center space-y-6 lg:space-y-10">
           <div className="relative w-[247px] h-12 lg:w-[400px] lg:h-20">
             <Image
-              src="/heart-ornament.png"
+              src="/svg/heart-ornament.svg"
               alt="heart-ornament"
               fill
               className="object-contain"
