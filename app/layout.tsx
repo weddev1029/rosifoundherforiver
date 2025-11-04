@@ -1,20 +1,34 @@
 import type { Metadata } from "next";
-import { Great_Vibes, Inter, Playfair_Display } from "next/font/google";
+import {
+  Abhaya_Libre,
+  Great_Vibes,
+  Inter,
+  Playfair_Display,
+} from "next/font/google";
 import "./globals.css";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
   weight: ["400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
 });
 
 const greatVibes = Great_Vibes({
   variable: "--font-great-vibes",
   weight: "400",
+  subsets: ["latin"],
 });
 
 const inter = Inter({
   variable: "--font-inter",
   weight: ["400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+});
+
+const abhayaLibre = Abhaya_Libre({
+  variable: "--font-abhaya-libre",
+  weight: ["400", "500", "600", "700", "800"],
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -46,7 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfairDisplay.variable} ${greatVibes.variable} ${inter.variable} antialiased`}
+        className={`${playfairDisplay.variable} ${greatVibes.variable} ${inter.variable} ${abhayaLibre.variable} antialiased`}
       >
         {children}
       </body>
