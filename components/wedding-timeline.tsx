@@ -16,7 +16,7 @@ export default function WeddingTimeline() {
         {weddingTimeline.map((item) => (
           <li
             key={item.id}
-            className="relative ms-10 rounded-2xl mb-6 border shadow-xl p-6"
+            className="relative mx-10 rounded-2xl mb-6 border shadow-xl p-6"
           >
             <span className="absolute flex items-center justify-center w-6 h-6 bg-white rounded-full -start-13.5 ring-4 ring-custom-secondary-3">
               <Heart size={14} />
@@ -51,9 +51,8 @@ export default function WeddingTimeline() {
           <span className="absolute bg-custom-secondary-3 rounded-full w-3 h-3 -start-2 -bottom-1"></span>
         </li>
 
-        {/* TODO: MISSING IN LAYOUT */}
         <div className="absolute bottom-0 right-0">
-          <div className="relative aspect-square w-full">
+          <div className="relative w-26 h-26 rotate-180">
             <Image
               alt="border-ornaments"
               src="/svg/border-ornament.svg"
