@@ -1,6 +1,11 @@
 import Image from "next/image";
 
 import Hero from "@/components/hero";
+import {
+  LocationCard,
+  LocationContent,
+  LocationImage,
+} from "@/components/location-card";
 import { Button } from "@/components/ui/button";
 import WeddingTimeline from "@/components/wedding-timeline";
 
@@ -25,18 +30,18 @@ export default function Invitation() {
         />
       </section>
 
-      <section className="p-4 space-y-2">
-        <div className="flex min-h-[180px]">
-          <div className="relative w-56 md:w-72 lg:w-1/3">
+      <section className="p-4 lg:px-32 space-y-2 lg:space-y-4">
+        <LocationCard>
+          <LocationImage>
             <Image
               src="/others/church.webp"
               alt="Saint Anthony Abbot Parish Church"
               fill
               className="object-cover object-center"
             />
-          </div>
+          </LocationImage>
 
-          <div className="bg-custom-primary p-2 md:p-4 space-y-2 text-sm flex-1">
+          <LocationContent>
             <div className="uppercase text-white md:text-xl lg:text-2xl">
               <h3 className="md:text-2xl lg:3xl">
                 Saint Anthony Abbot Parish Church
@@ -48,11 +53,11 @@ export default function Invitation() {
             <Button className="bg-custom-primary-4 rounded-none text-black hover:bg-white text-base">
               Get Directions
             </Button>
-          </div>
-        </div>
+          </LocationContent>
+        </LocationCard>
 
-        <div className="flex min-h-[180px]">
-          <div className="bg-custom-secondary-2 p-2 md:p-4 space-y-2 text-sm flex-1">
+        <LocationCard>
+          <LocationContent className="bg-custom-secondary-2">
             <div className="uppercase text-white md:text-xl lg:text-2xl">
               <h3 className="md:text-2xl lg:3xl">
                 E Jose Events Place & Resort
@@ -64,17 +69,17 @@ export default function Invitation() {
             <Button className="bg-custom-primary-4 rounded-none text-black hover:bg-white text-base">
               Get Directions
             </Button>
-          </div>
+          </LocationContent>
 
-          <div className="relative w-56 md:w-72 lg:w-1/3">
+          <LocationImage>
             <Image
               src="/others/reception.webp"
               alt="E Jose Events Place & Resort"
               fill
               className="object-cover object-center"
             />
-          </div>
-        </div>
+          </LocationImage>
+        </LocationCard>
       </section>
 
       <WeddingTimeline />
