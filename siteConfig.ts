@@ -36,7 +36,6 @@ export const weddingTimeline = [
       },
     ],
   },
-
   {
     id: 2,
     title: "Reception",
@@ -61,14 +60,13 @@ export const weddingTimeline = [
       { id: 14, time: "6:40 PM", description: "Closing Prayer" },
     ],
   },
-
   {
     id: 3,
     title: "After Party",
     timeline: [
       {
         id: 1,
-        time: "6:40 PM Onwards",
+        time: "6:40 PM Onwards –",
         description: "After-Party",
       },
       {
