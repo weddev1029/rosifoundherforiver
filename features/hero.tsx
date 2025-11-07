@@ -14,14 +14,16 @@ import "swiper/css/effect-fade";
 import dynamic from "next/dynamic";
 
 // import Countdown from "@/components/countdown";
-const CoundownTimer = dynamic(() => import("./countdown"), { ssr: false });
+const CoundownTimer = dynamic(() => import("@/components/countdown"), {
+  ssr: false,
+});
 
 import { Suspense } from "react";
+import { Button } from "@/components/ui/button";
 import { CalendarIcon } from "@/lib/icons";
 import { weddingDate } from "@/siteConfig";
-import { Button } from "./ui/button";
 
-export default function Hero() {
+export function Hero() {
   const difference = new Date(weddingDate).getTime() - Date.now();
 
   return (
