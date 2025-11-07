@@ -16,7 +16,7 @@ export default function Invitation() {
         <Hero />
       </main>
 
-      <section className="flex items-center justify-center gap-5 bg-[url('/hero/hero-0.jpg')] px-4 py-22 lg:px-8 lg:py-24 bg-cover bg-center lg:gap-28">
+      <section className="flex items-center justify-center gap-5 bg-[url('/hero/hero-0.jpg')] px-4 py-22 lg:px-8 lg:py-24 bg-cover bg-center lg:gap-28 bg-fixed">
         <CoupleCard
           url="/couple/groom.jpg"
           name="John Doe"
@@ -30,7 +30,7 @@ export default function Invitation() {
         />
       </section>
 
-      <section className="p-4 lg:px-32 space-y-2 lg:space-y-4">
+      <section className="p-4 lg:px-40 2xl:px-100 space-y-2 lg:space-y-4">
         <LocationCard>
           <LocationImage>
             <Image
@@ -50,9 +50,11 @@ export default function Invitation() {
               <p>Jan 10, 2026</p>
             </div>
 
-            <Button className="bg-custom-primary-4 rounded-none text-black hover:bg-white text-base">
-              Get Directions
-            </Button>
+            <div>
+              <Button className="bg-custom-primary-4 rounded-none text-black hover:bg-white text-sm lg:text-2xl lg:p-6">
+                Get Directions
+              </Button>
+            </div>
           </LocationContent>
         </LocationCard>
 
@@ -66,9 +68,11 @@ export default function Invitation() {
               <p>Jan 10, 2026</p>
             </div>
 
-            <Button className="bg-custom-primary-4 rounded-none text-black hover:bg-white text-base">
-              Get Directions
-            </Button>
+            <div>
+              <Button className="bg-custom-primary-4 rounded-none text-black hover:bg-white text-sm lg:text-2xl lg:p-6">
+                Get Directions
+              </Button>
+            </div>
           </LocationContent>
 
           <LocationImage>
