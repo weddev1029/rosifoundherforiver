@@ -1,13 +1,12 @@
 import Image from "next/image";
 
-import Hero from "@/components/hero";
 import {
   LocationCard,
   LocationContent,
   LocationImage,
 } from "@/components/location-card";
 import { Button } from "@/components/ui/button";
-import WeddingTimeline from "@/components/wedding-timeline";
+import { Hero, WeddingTimeline } from "@/features";
 
 export default function Invitation() {
   return (
@@ -30,6 +29,7 @@ export default function Invitation() {
         />
       </section>
 
+      {/* TODO: Put Location and Wedding Timeline in a single section */}
       <section className="p-4 lg:px-40 2xl:px-100 space-y-2 lg:space-y-4">
         <LocationCard>
           <LocationImage>
