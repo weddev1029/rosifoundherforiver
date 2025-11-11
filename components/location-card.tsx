@@ -1,7 +1,9 @@
 import { cn } from "@/lib/utils";
 
 function LocationCard({ children }: { children: React.ReactNode }) {
-  return <div className="flex min-h-[180px]">{children}</div>;
+  return (
+    <div className="flex min-h-[180px] max-w-[1094px] w-full">{children}</div>
+  );
 }
 
 function LocationImage({
@@ -12,7 +14,12 @@ function LocationImage({
   className?: string;
 }) {
   return (
-    <div className={cn("relative w-56 md:w-72 lg:w-1/3", className)}>
+    <div
+      className={cn(
+        "relative w-56 md:w-72 lg:w-[604px] lg:h-[346px]",
+        className,
+      )}
+    >
       {children}
     </div>
   );
@@ -28,7 +35,7 @@ function LocationContent({
   return (
     <div
       className={cn(
-        "bg-custom-primary p-2 md:p-4 space-y-2 text-sm flex-1",
+        "bg-custom-primary p-2 md:p-4 space-y-2 text-sm flex-1 grid content-center w-full",
         className,
       )}
     >
