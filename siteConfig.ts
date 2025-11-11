@@ -1,8 +1,10 @@
+import type { TWeddingTimeline } from "./config/types";
+
 export const heroImages = [];
 
 export const weddingDate = "2026-01-10T12:30:00"; // January 10, 2026, 12:30 PM
 
-export const weddingTimeline = [
+export const weddingTimeline: TWeddingTimeline[] = [
   {
     id: 1,
     title: "Wedding Ceremony",
@@ -10,8 +12,8 @@ export const weddingTimeline = [
       {
         id: 1,
         time: "12:30 PM",
-        description:
-          "Church Arrival (Please be there at the church by 12:30 PM)",
+        description: "Church Arrival",
+        subDescription: "(Please be there at the church by 12:30 PM)",
       },
       {
         id: 2,
@@ -21,7 +23,8 @@ export const weddingTimeline = [
       {
         id: 3,
         time: "2:00 PM",
-        description: "Pictorial (Couple, entourage, and family at church)",
+        description: "Pictorial",
+        subDescription: "(Couple, entourage, and family at church)",
       },
       {
         id: 4,
@@ -45,7 +48,8 @@ export const weddingTimeline = [
       {
         id: 3,
         time: "3:45 PM",
-        description: "Grand Entrance (Entrance of entourage and newlyweds)",
+        description: "Grand Entrance",
+        subDescription: "(Entrance of entourage and newlyweds)",
       },
       { id: 4, time: "4:05 PM", description: "Opening Prayer" },
       { id: 5, time: "4:08 PM", description: "Game #1" },
@@ -71,12 +75,12 @@ export const weddingTimeline = [
       },
       {
         id: 2,
-        time: null,
+        time: "",
         description: "Open dance floor, drinks, and swimming",
       },
       {
         id: 3,
-        time: null,
+        time: "",
         description: "Relaxed social time with guests",
       },
       {
@@ -87,7 +91,7 @@ export const weddingTimeline = [
       },
       {
         id: 5,
-        time: null,
+        time: "",
         description:
           "*If you prefer to join us directly at the reception, please be at the reception venue by 3:00 PM.",
       },
