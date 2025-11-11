@@ -1,89 +1,180 @@
 import { Heart } from "lucide-react";
 import Image from "next/image";
+import {
+  SponsorContent,
+  SponsorTitle,
+  SponsorWrapper,
+} from "@/components/sponsors";
+import type { TTimeline } from "@/config/types";
 import { weddingTimeline } from "@/siteConfig";
 
 export function WeddingTimeline() {
   return (
-    <section className="p-4 space-y-6">
-      <h2 className="text-center font-abhaya-libre text-3xl xl:text-5xl">
+    <section className="px-4">
+      <h2 className="text-center font-abhaya-libre text-3xl xl:text-4xl py-4 xl:py-12 text-custom-secondary-2 uppercase">
         Wedding Timeline
       </h2>
 
       <div className="flex flex-col gap-16 xl:flex-row xl:justify-center xl:gap-0">
-        <div className="relative order-1 xl:order-0 rounded-2xl border shadow-xl px-5 py-8 text-sm md:text-base mx-4 xl:max-w-2xl grid gap-16 lg:grid-cols-2 lg:gap-12">
-          <div className="space-y-4 lg:order-last">
-            <h4 className="font-great-vibes tracking-wide text-4xl lg:text-2xl text-center">
-              Parents
-            </h4>
-            <div className="text-center text-lg lg:text-base tracking-wide space-y-6">
-              <p className="font-bold">Parents of the groom</p>
-              <p>Mr. Amado Castro &amp; Mrs. Eloisa Castro</p>
-              <p className="font-bold">Parents of the bride</p>
-              <p>Mr. Enrico Diaz &amp; Mrs. Rovelyn Formentera</p>
-            </div>
-          </div>
-          <div className="space-y-4">
-            <h4 className="font-great-vibes tracking-wide text-4xl lg:text-2xl text-center">
-              Principal Sponsors
-            </h4>
-            <div className="text-center text-lg lg:text-base tracking-wide space-y-6">
-              <p>Marieta Rosauro &amp; Nick Pabustan</p>
-              <p>Endilyn Espé &amp; Julio Quilantang</p>
-              <p>Erma Galvez &amp; Edgardo Paz</p>
-              <p>Shirley Dela Cruz &amp; Danilo Villafuerte</p>
-              <p>Rubena Gutierrez &amp; Roberto Rosauro</p>
-              <p>Francisca Rosauro &amp; Richard Rosauro</p>
-              <p>Mildred Cueva &amp; Leo Paz</p>
-              <p>Ivy Balista &amp; Jose Rex Credo</p>
-              <p>Irish Garcia &amp; Danilo Mesina</p>
-              <p>Margie Peregrino &amp; Edgar Magaling</p>
-              <p>Olivia Quillan &amp; Noel Castro</p>
-              <p>Lucita Santos &amp; Mario Villeza Jr.</p>
-              <p>Emily Deramus &amp; Ricardo Bacay</p>
-            </div>
-          </div>
-          <div className="space-y-4 lg:row-span-2">
-            <h4 className="font-great-vibes tracking-wide text-4xl lg:text-2xl text-center">
-              Secondary Sponsors
-            </h4>
-            <div className="text-center text-lg lg:text-base tracking-wide space-y-6">
-              <p className="font-bold">Maid of Honor</p>
-              <p>Genevieve Argosino</p>
-              <p className="font-bold">Best Man</p>
-              <p>Jarlem Red de Peralta</p>
-              <p className="font-bold">To Clothe Us as One</p>
-              <p>Prixie Ivane Castro & Vien Legarde</p>
-              <p className="font-bold">To Light Our Path</p>
-              <p>Roselyn Del Rosario & Carlo Magaling</p>
-              <p className="font-bold">To Bind Us Together</p>
-              <p>Patricia Kim Rosauro & Adrian Dela Vega</p>
-              <p className="font-bold">Little Bride</p>
-              <p>Priona Izzy Castro</p>
-              <p className="font-bold">Flower Girls</p>
-              <p>Elizabeth Diaz & Princess Alyanna Ipoi</p>
-              <p className="font-bold">Coin Bearer</p>
-              <p>Ranz-AJ Baynosa</p>
-              <p className="font-bold">Ring Bearer</p>
-              <p>Sean Marcos Rosauro</p>
-              <p className="font-bold">Bible Bearer</p>
-              <p>Ross Gil Luciano</p>
-            </div>
-          </div>
-          <div className="space-y-4 lg:row-span-2">
-            <h4 className="font-great-vibes tracking-wide text-4xl lg:text-2xl text-center">
-              Bridesmaids And Groomsmen
-            </h4>
-            <div className="text-center text-lg lg:text-base tracking-wide space-y-6">
-              <p>Edwarda Diaz &amp; Jaime Rosauro</p>
-              <p>Erica Rosauro &amp; Wally Ramos</p>
-              <p>Rinabell Diaz &amp; Jayson Santos</p>
-              <p>Sheila Villafuerte &amp; Gervin Mark Gayoso</p>
-              <p>Marjorie Alino &amp; Mark Darren Reyes</p>
+        <div className="relative order-1 xl:order-0 rounded-2xl border shadow-xl px-5 py-8 text-sm md:text-base m-4 xl:max-w-2xl grid gap-y-16 lg:grid-cols-2 lg:gap-y-12">
+          <SponsorWrapper className="lg:order-last">
+            <SponsorTitle>Parents</SponsorTitle>
+
+            <SponsorContent>
+              <div className="space-y-6 xl:space-y-2">
+                <p className="font-bold">Parents of the groom</p>
+                <p>
+                  Mr. Amado Castro <span className="font-bold">&amp;</span> Mrs.
+                  Eloisa Castro
+                </p>
+              </div>
+              <div className="space-y-6 xl:space-y-2">
+                <p className="font-bold">Parents of the bride</p>
+                <p>
+                  Mr. Enrico Diaz <span className="font-bold">&amp;</span> Mrs.
+                  Rovelyn Formentera
+                </p>
+              </div>
+            </SponsorContent>
+          </SponsorWrapper>
+
+          <SponsorWrapper>
+            <SponsorTitle>Principal Sponsors</SponsorTitle>
+
+            <SponsorContent>
+              <p>
+                Marieta Rosauro <span className="font-bold">&amp;</span> Nick
+                Pabustan
+              </p>
+              <p>
+                Endilyn Espé <span className="font-bold">&amp;</span> Julio
+                Quilantang
+              </p>
+              <p>
+                Erma Galvez <span className="font-bold">&amp;</span> Edgardo Paz
+              </p>
+              <p>
+                Shirley Dela Cruz <span className="font-bold">&amp;</span>{" "}
+                Danilo Villafuerte
+              </p>
+              <p>
+                Rubena Gutierrez <span className="font-bold">&amp;</span>{" "}
+                Roberto Rosauro
+              </p>
+              <p>
+                Francisca Rosauro <span className="font-bold">&amp;</span>{" "}
+                Richard Rosauro
+              </p>
+              <p>
+                Mildred Cueva <span className="font-bold">&amp;</span> Leo Paz
+              </p>
+              <p>
+                Ivy Balista <span className="font-bold">&amp;</span> Jose Rex
+                Credo
+              </p>
+              <p>
+                Irish Garcia <span className="font-bold">&amp;</span> Danilo
+                Mesina
+              </p>
+              <p>
+                Margie Peregrino <span className="font-bold">&amp;</span> Edgar
+                Magaling
+              </p>
+              <p>
+                Olivia Quillan <span className="font-bold">&amp;</span> Noel
+                Castro
+              </p>
+              <p>
+                Lucita Santos <span className="font-bold">&amp;</span> Mario
+                Villeza Jr.
+              </p>
+              <p>
+                Emily Deramus <span className="font-bold">&amp;</span> Ricardo
+                Bacay
+              </p>
+            </SponsorContent>
+          </SponsorWrapper>
+
+          <SponsorWrapper>
+            <SponsorTitle>Secondary Sponsors</SponsorTitle>
+
+            <SponsorContent>
+              <div className="space-y-6 xl:space-y-2">
+                <p className="font-bold">Best Man</p>
+                <p>Jarlem Red de Peralta</p>
+              </div>
+
+              <div className="space-y-6 xl:space-y-2">
+                <p className="font-bold">To Clothe Us as One</p>
+                <p>Prixie Ivane Castro & Vien Legarde</p>
+              </div>
+
+              <div className="space-y-6 xl:space-y-2">
+                <p className="font-bold">To Light Our Path</p>
+                <p>Roselyn Del Rosario & Carlo Magaling</p>
+              </div>
+
+              <div className="space-y-6 xl:space-y-2">
+                <p className="font-bold">To Bind Us Together</p>
+                <p>Patricia Kim Rosauro & Adrian Dela Vega</p>
+              </div>
+
+              <div className="space-y-6 xl:space-y-2">
+                <p className="font-bold">Little Bride</p>
+                <p>Priona Izzy Castro</p>
+              </div>
+
+              <div className="space-y-6 xl:space-y-2">
+                <p className="font-bold">Flower Girls</p>
+                <p>Elizabeth Diaz & Princess Alyanna Ipoi</p>
+              </div>
+
+              <div className="space-y-6 xl:space-y-2">
+                <p className="font-bold">Coin Bearer</p>
+                <p>Ranz-AJ Baynosa</p>
+              </div>
+
+              <div className="space-y-6 xl:space-y-2">
+                <p className="font-bold">Ring Bearer</p>
+                <p>Sean Marcos Rosauro</p>
+              </div>
+
+              <div className="space-y-6 xl:space-y-2">
+                <p className="font-bold">Bible Bearer</p>
+                <p>Ross Gil Luciano</p>
+              </div>
+            </SponsorContent>
+          </SponsorWrapper>
+
+          <SponsorWrapper className="xl:row-span-2">
+            <SponsorTitle>Bridesmaids And Groomsmen</SponsorTitle>
+
+            <SponsorContent>
+              <p>
+                Edwarda Diaz <span className="font-bold">&amp;</span> Jaime
+                Rosauro
+              </p>
+              <p>
+                Erica Rosauro <span className="font-bold">&amp;</span> Wally
+                Ramos
+              </p>
+              <p>
+                Rinabell Diaz <span className="font-bold">&amp;</span> Jayson
+                Santos
+              </p>
+              <p>
+                Sheila Villafuerte <span className="font-bold">&amp;</span>{" "}
+                Gervin Mark Gayoso
+              </p>
+              <p>
+                Marjorie Alino <span className="font-bold">&amp;</span> Mark
+                Darren Reyes
+              </p>
               <p>Harry Villanueva</p>
               <p>Joseph John Anthony Paz</p>
               <p>Jasper Gan</p>
-            </div>
-          </div>
+            </SponsorContent>
+          </SponsorWrapper>
 
           <div className="absolute -top-8 -left-8 xl:-top-18 xl:-left-18">
             <div className="relative w-26 h-26 xl:w-52 xl:h-52">
@@ -115,12 +206,19 @@ export function WeddingTimeline() {
               <div className="space-y-3">
                 <h3 className="font-semibold uppercase">{item.title}</h3>
 
-                {item.timeline.map((timeline) => (
-                  <div key={timeline.id}>
+                {item.timeline.map((timeline: TTimeline) => (
+                  <div key={timeline.id} className="xl:text-sm">
                     {timeline.time && timeline.time !== "NOTE" ? (
                       <div key={timeline.id} className="flex gap-1">
                         <p className="min-w-16 font-bold">{timeline.time}</p>
-                        <p>{timeline.description}</p>
+                        <div>
+                          <p>{timeline.description}</p>
+                          {timeline.subDescription && (
+                            <p className="xl:text-xs">
+                              {timeline.subDescription}
+                            </p>
+                          )}
+                        </div>
                       </div>
                     ) : timeline.time === "NOTE" ? (
                       <div key={timeline.id}>
