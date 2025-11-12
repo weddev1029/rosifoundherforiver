@@ -1,6 +1,32 @@
 import type { TWeddingTimeline } from "./config/types";
 
-export const heroImages = [];
+export const heroImages = [
+  {
+    id: 1,
+    src: "/hero/hero-1.jpg",
+    alt: "hero-1",
+  },
+  {
+    id: 2,
+    src: "/hero/hero-2.jpg",
+    alt: "hero-2",
+  },
+  {
+    id: 3,
+    src: "/hero/hero-3.jpg",
+    alt: "hero-3",
+  },
+  {
+    id: 4,
+    src: "/hero/hero-4.jpg",
+    alt: "hero-4",
+  },
+  {
+    id: 5,
+    src: "/hero/hero-5.jpg",
+    alt: "hero-5",
+  },
+];
 
 export const weddingDate = "2026-01-10T12:30:00"; // January 10, 2026, 12:30 PM
 
