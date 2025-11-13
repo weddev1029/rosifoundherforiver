@@ -10,7 +10,7 @@ import { weddingTimeline } from "@/siteConfig";
 
 export function WeddingTimeline() {
   return (
-    <section className="px-4">
+    <section className="px-4 xl:pb-20">
       <h2 className="text-center font-abhaya-libre text-3xl xl:text-4xl py-4 xl:py-12 text-custom-secondary-2 uppercase">
         Wedding Timeline
       </h2>

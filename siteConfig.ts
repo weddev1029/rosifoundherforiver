@@ -4,27 +4,27 @@ export const heroImages = [
   {
     id: 1,
     src: "/hero/hero-1.jpg",
-    alt: "hero-1",
+    alt: "wedding-1",
   },
   {
     id: 2,
     src: "/hero/hero-2.jpg",
-    alt: "hero-2",
+    alt: "wedding-2",
   },
   {
     id: 3,
     src: "/hero/hero-3.jpg",
-    alt: "hero-3",
+    alt: "wedding-3",
   },
   {
     id: 4,
     src: "/hero/hero-4.jpg",
-    alt: "hero-4",
+    alt: "wedding-4",
   },
   {
     id: 5,
     src: "/hero/hero-5.jpg",
-    alt: "hero-5",
+    alt: "wedding-5",
   },
 ];
 

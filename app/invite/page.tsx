@@ -85,7 +85,7 @@ export default function Invitation() {
       <WeddingTimeline />
 
       <section className="grid grid-cols-2 md:grid-cols-3 bg-custom-secondary-3 py-10">
-        <div className="col-span-2 space-y-3 flex flex-col items-center md:col-span-1 mb-6 md:mb-0">
+        <div className="col-span-2 space-y-3 flex flex-col items-center md:col-span-1 mb-6 md:mb-0 md:justify-center">
           <div className="relative aspect-video w-[50px] xl:w-[78.75px]">
             <Image
               src={"/svg/butterfly-ornament.svg"}
@@ -95,14 +95,18 @@ export default function Invitation() {
             />
           </div>
 
-          <h4 className="text-2xl text-background">
-            The <span className="font-great-vibes text-3xl">Love</span> in
-            Gallery
+          <h4 className="text-2xl text-background xl:text-4xl">
+            The{" "}
+            <span className="font-great-vibes text-3xl xl:text-5xl">Love</span>{" "}
+            in Gallery
           </h4>
         </div>
 
         {heroImages.map((image) => (
-          <div key={image.id} className="relative w-[188.82px] h-[125.4px]">
+          <div
+            key={image.id}
+            className="relative w-[188.82px] h-[125.4px] xl:w-[365.25px] xl:h-[242.56px]"
+          >
             <Image
               src={image.src}
               alt={image.alt}

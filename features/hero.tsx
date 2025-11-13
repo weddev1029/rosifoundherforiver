@@ -21,7 +21,7 @@ const CoundownTimer = dynamic(() => import("@/components/countdown"), {
 import { Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { CalendarIcon } from "@/lib/icons";
-import { weddingDate } from "@/siteConfig";
+import { heroImages, weddingDate } from "@/siteConfig";
 
 export function Hero() {
   const difference = new Date(weddingDate).getTime() - Date.now();
@@ -38,46 +38,19 @@ export function Hero() {
       }}
       className="h-dvh"
     >
-      <SwiperSlide className="relative max-h-screen aspect-video">
-        <Image
-          alt="wedding-1"
-          src="/hero/hero-1.jpg"
-          fill
-          className="object-cover brightness-50"
-        />
-      </SwiperSlide>
-      <SwiperSlide className="relative max-h-screen aspect-video">
-        <Image
-          alt="wedding-2"
-          src="/hero/hero-2.jpg"
-          fill
-          className="object-cover brightness-50"
-        />
-      </SwiperSlide>
-      <SwiperSlide className="relative max-h-screen aspect-video">
-        <Image
-          alt="wedding-3"
-          src="/hero/hero-3.jpg"
-          fill
-          className="object-cover brightness-50"
-        />
-      </SwiperSlide>
-      <SwiperSlide className="relative max-h-screen aspect-video">
-        <Image
-          alt="wedding-4"
-          src="/hero/hero-4.jpg"
-          fill
-          className="object-cover brightness-50"
-        />
-      </SwiperSlide>
-      <SwiperSlide className="relative max-h-screen aspect-video">
-        <Image
-          alt="wedding-5"
-          src="/hero/hero-5.jpg"
-          fill
-          className="object-cover brightness-50"
-        />
-      </SwiperSlide>
+      {heroImages.map((image) => (
+        <SwiperSlide
+          key={image.id}
+          className="relative max-h-screen aspect-video"
+        >
+          <Image
+            alt={image.alt}
+            src={image.src}
+            fill
+            className="object-cover brightness-50"
+          />
+        </SwiperSlide>
+      ))}
 
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-9999 text-center w-full">
         <div className="grid gap-4 uppercase text-lg lg:text-3xl text-white">
