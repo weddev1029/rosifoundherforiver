@@ -45,6 +45,11 @@
   --color-custom-secondary: #323232;
   --color-custom-secondary-2: #424143;
   --color-custom-secondary-3: #524a4e;
+  --color-dresscode-1: #eeeeee;
+  --color-dresscode-2: #dc89a3;
+  --color-dresscode-3: #f16c9b;
+  --color-dresscode-4: #f9c5d2;
+  --color-dresscode-5: #2a2a2a;
 }
 
 @theme inline {
@@ -96,6 +101,11 @@
   --color-custom-secondary: var(--color-custom-secondary);
   --color-custom-secondary-2: var(--color-custom-secondary-2);
   --color-custom-secondary-3: var(--color-custom-secondary-3);
+  --color-dresscode-1: var(--color-dresscode-1);
+  --color-dresscode-2: var(--color-dresscode-2);
+  --color-dresscode-3: var(--color-dresscode-3);
+  --color-dresscode-4: var(--color-dresscode-4);
+  --color-dresscode-5: var(--color-dresscode-5);
 }
 
 @theme {
@@ -171,4 +181,13 @@
 
 .box {
   mask: radial-gradient(20px at 20px 20px, #0000 98%, #000) -20px -20px;
+}
+
+.flip-horizontal {
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -ms-filter: fliph; /*IE*/
+  filter: fliph; /*IE*/
 }
