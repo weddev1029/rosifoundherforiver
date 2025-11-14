@@ -11,16 +11,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 
-import dynamic from "next/dynamic";
-
-// import Countdown from "@/components/countdown";
-const CoundownTimer = dynamic(() => import("@/components/countdown"), {
-  ssr: false,
-});
-
-import { Suspense } from "react";
-import { Button } from "@/components/ui/button";
-import { CalendarIcon } from "@/lib/icons";
+import RemainingDays from "@/components/remaining-days";
 import { heroImages, weddingDate } from "@/siteConfig";
 
 export function Hero() {
@@ -29,12 +20,13 @@ export function Hero() {
   return (
     <main>
       <Swiper
+        speed={2000}
         slidesPerView={1}
         effect={"fade"}
         loop={true}
         modules={[Autoplay, EffectFade]}
         autoplay={{
-          delay: 1000 * 10,
+          delay: 1000 * 3,
           disableOnInteraction: false,
         }}
         className="h-dvh"
@@ -63,29 +55,7 @@ export function Hero() {
           </div>
         </div>
 
-        {difference > 0 && (
-          <div className="absolute bottom-0 z-9999 w-full">
-            <div className="w-full flex flex-col lg:flex-row text-white">
-              <div className="bg-custom-secondary lg:bg-custom-secondary/80 flex items-center justify-center py-8 lg:px-12 gap-6">
-                <h4 className="uppercase text-end">
-                  <span className="text-sm">Missing days to</span>
-                  <span className="text-3xl block">Wedding</span>
-                </h4>
-                <Button
-                  variant={"outline"}
-                  className="bg-transparent rounded hover:bg-custom-primary hover:text-secondary font-inter"
-                >
-                  <CalendarIcon />
-                  Save the Date
-                </Button>
-              </div>
-
-              <Suspense fallback={<div>Loading...</div>}>
-                <CoundownTimer />
-              </Suspense>
-            </div>
-          </div>
-        )}
+        {difference > 0 && <RemainingDays />}
       </Swiper>
     </main>
   );
