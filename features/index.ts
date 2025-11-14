@@ -1,2 +1,10 @@
+export { DressCode } from "./dress-code";
+export { Footer } from "./footer";
+export { GroomNBride } from "./groom-n-bride";
 export { Hero } from "./hero";
+export { Location } from "./location";
+export { LoveInGallery } from "./love-in-gallery";
+export { LoveStory } from "./love-story";
+export { RSVP } from "./rsvp";
+export { TheBigDay } from "./the-big-day";
 export { WeddingTimeline } from "./wedding-timeline";
