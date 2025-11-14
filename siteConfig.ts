@@ -124,3 +124,24 @@ export const weddingTimeline: TWeddingTimeline[] = [
     ],
   },
 ];
+
+export const loveStory = [
+  {
+    id: 1,
+    title: "How It Started, 2013",
+    story:
+      "We first met in 2013, when we were just 12 and 15 years old. Life took us on separate paths, but fate had other plans. Four years later, we met again, this time as senior high school classmates.",
+  },
+  {
+    id: 2,
+    title: "Our Journey, 2017",
+    story:
+      "What began as friendship soon grew into love. In 2017, we became a couple and faced life’s challenges together. Through every high and low, our bond only grew stronger.",
+  },
+  {
+    id: 3,
+    title: "Forever Begins, 2026",
+    story:
+      "After eight years of love, laughter, and growth, we’re finally saying “I do.” This is the start of our forever, a new chapter as husband and wife.",
+  },
+];
