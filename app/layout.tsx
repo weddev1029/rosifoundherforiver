@@ -6,6 +6,7 @@ import {
   Playfair_Display,
 } from "next/font/google";
 import "./globals.css";
+import BackToTop from "@/components/back-to-top";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
@@ -58,11 +59,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
         className={`${playfairDisplay.variable} ${greatVibes.variable} ${inter.variable} ${abhayaLibre.variable} antialiased`}
       >
         {children}
+        <BackToTop />
       </body>
     </html>
   );
