@@ -1,5 +1,3 @@
-import { Checkbox } from "@radix-ui/react-checkbox";
-import { Label } from "@radix-ui/react-label";
 import RemainingDays from "@/components/remaining-days";
 import {
   DressCode,
