@@ -1,3 +1,5 @@
+import { Checkbox } from "@radix-ui/react-checkbox";
+import { Label } from "@radix-ui/react-label";
 import RemainingDays from "@/components/remaining-days";
 import {
   DressCode,
@@ -14,7 +16,7 @@ import {
 
 export default function Invitation() {
   return (
-    <div className="min-h-screen font-playfair-display">
+    <div className="min-h-screen font-playfair-display overflow-hidden">
       <Hero />
       <GroomNBride />
       <Location />

@@ -14,7 +14,7 @@ export default function ColorCode({ color }: { color: colorCode }) {
   return (
     <div
       className={cn(
-        "w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-36 xl:h-36 rounded-full shadow-lg transition-transform hover:-translate-y-2",
+        "w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-36 xl:h-36 rounded-full shadow-lg transition-transform hover:-translate-y-2",
         colorCode[color],
       )}
     ></div>
