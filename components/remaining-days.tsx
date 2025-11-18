@@ -1,9 +1,8 @@
 "use client";
 
-import { CalendarIcon } from "lucide-react";
 import dynamic from "next/dynamic";
 import { cn } from "@/lib/utils";
-import { Button } from "./ui/button";
+import SaveTheDateButton from "./save-the-date-button";
 
 // import Countdown from "@/components/countdown";
 const CoundownTimer = dynamic(() => import("@/components/countdown"), {
@@ -23,13 +22,7 @@ export default function RemainingDays({
             <span className="text-sm">Missing days to</span>
             <span className="text-3xl block">Wedding</span>
           </h4>
-          <Button
-            variant={"outline"}
-            className="bg-transparent rounded hover:bg-custom-primary hover:text-secondary font-inter"
-          >
-            <CalendarIcon />
-            Save the Date
-          </Button>
+          <SaveTheDateButton />
         </div>
 
         <CoundownTimer />
