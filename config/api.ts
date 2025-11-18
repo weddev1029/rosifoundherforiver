@@ -2,6 +2,7 @@ import axios from "axios";
 import { z } from "zod";
 
 export const RSVPFormSchema = z.object({
+  timestamp: z.number(),
   isAttending: z.boolean(),
   names: z.string().min(1, "Required Field").trim(),
   comments: z
@@ -11,3 +12,9 @@ export const RSVPFormSchema = z.object({
 });
 
 export type TRSVPForm = z.infer<typeof RSVPFormSchema>;
+
+export const sendRSVPForm = async (data: TRSVPForm) => {
+  const response = await axios.post("/api/rsvp", data);
+
+  return response;
+};
