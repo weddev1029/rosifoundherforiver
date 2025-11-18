@@ -29,6 +29,10 @@ export const heroImages = [
 ];
 
 export const weddingDate = "2026-01-10T12:30:00"; // January 10, 2026, 12:30 PM
+export const weddingChurch = "Diocesan Shrine and Parish of St. Anthony, Abbot";
+export const weddingReception = "E Jose Events Place and Resort";
+export const weddingCalendarURL =
+  "https://calendar.google.com/calendar/render?action=TEMPLATE&text=%23ROSIfoundherforIVER&dates=20260110T123000Z/20260110T184000Z&details=Tied+by+love,+sealed+for+life.&location=Diocesan+Shrine+and+Parish+of+St.+Anthony,+Abbot";
 
 export const weddingTimeline: TWeddingTimeline[] = [
   {
