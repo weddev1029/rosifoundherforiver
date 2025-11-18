@@ -4,6 +4,7 @@ import type React from "react";
 import RSVPForm from "@/components/rsvp-form";
 import { FacebookIcon } from "@/lib/icons";
 import { cn } from "@/lib/utils";
+import { weddingChurch, weddingReception } from "@/siteConfig";
 
 export function RSVP() {
   return (
@@ -21,32 +22,44 @@ export function RSVP() {
           </p>
         </div>
         <div className="w-full sm:w-[378px] lg:w-[800px] xl:w-[1041px] bg-custom-primary/60 p-6 space-y-5">
-          <h2 className="text-xl lg:text-4xl">#ROSIfoundherforIVER</h2>
-          <div className="flex gap-10 items-center">
+          <h2 className="text-xl lg:text-4xl tracking-wider">
+            #ROSIfoundherforIVER
+          </h2>
+          <div className="flex gap-10">
             <RSVPForm />
 
             <div className="w-1/2 hidden lg:block space-y-7">
               <Info icon={<Church size={28} />}>
-                <p className="text-xl tracking-wide">
-                  Saint Anthony Abbot Parish Church Nueva Ecija
-                </p>
+                <Link
+                  href="https://maps.app.goo.gl/pPcPyqfdj4j6bgSi7"
+                  target="_blank"
+                  referrerPolicy="no-referrer"
+                  className="text-lg tracking-wide hover:underline underline-offset-8"
+                >
+                  {weddingChurch}
+                </Link>
               </Info>
               <Info icon={<ConciergeBell size={28} />}>
-                <p className="text-xl tracking-wide">
-                  E Jose Events Place & Resort Papaya San Antonio Nueva Ecija
-                </p>
+                <Link
+                  href="https://maps.app.goo.gl/6SdzvVDTvGwSbgeM6"
+                  target="_blank"
+                  referrerPolicy="no-referrer"
+                  className="text-lg tracking-wide hover:underline underline-offset-8"
+                >
+                  {weddingReception}
+                </Link>
               </Info>
               <Info icon={<Phone fill="white" />}>
-                <p className="text-xl tracking-wide">09669300613</p>
+                <p className="text-lg tracking-wide">09669300613</p>
               </Info>
               <Info icon={<FacebookIcon />} className="items-center">
                 <Link
                   href={"https://www.facebook.com/share/1HGTbyZU54/"}
                   referrerPolicy="no-referrer"
                   target="_blank"
-                  className="tracking-wide text-sm"
+                  className="tracking-wide text-lg hover:underline underline-offset-8"
                 >
-                  https://www.facebook.com/share/1HGTbyZU54/
+                  Send me a message
                 </Link>
               </Info>
             </div>
