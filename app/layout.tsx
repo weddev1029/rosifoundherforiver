@@ -7,6 +7,7 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import BackToTop from "@/components/back-to-top";
+import { Toaster } from "@/components/ui/sonner";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
@@ -64,6 +65,7 @@ export default function RootLayout({
         className={`${playfairDisplay.variable} ${greatVibes.variable} ${inter.variable} ${abhayaLibre.variable} antialiased`}
       >
         {children}
+        <Toaster position="top-center" />
         <BackToTop />
       </body>
     </html>
