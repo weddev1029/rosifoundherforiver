@@ -134,6 +134,7 @@
       transform: scale(1);
     }
   }
+  --breakpoint-xs: 26.5625rem;
 }
 
 .dark {
@@ -181,6 +182,26 @@
 
 .box {
   mask: radial-gradient(20px at 20px 20px, #0000 98%, #000) -20px -20px;
+}
+
+/* Width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--color-custom-secondary);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-custom-primary);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-custom-primary-2);
 }
 
 .flip-horizontal {
