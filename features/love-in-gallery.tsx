@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { heroImages } from "@/siteConfig";
+import ImageGallery from "@/components/image-gallery";
 
 export function LoveInGallery() {
   return (
@@ -22,16 +22,16 @@ export function LoveInGallery() {
           </h4>
         </div>
 
-        {heroImages.map((image) => (
-          <div key={image.id} className="relative w-full aspect-video">
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              className="object-cover object-center"
-            />
-          </div>
-        ))}
+        {/* {Array.from({ length: 5 }).map((_, index) => (
+          // biome-ignore lint/suspicious/noArrayIndexKey: <I have to>
+          <ImageGallery key={index} />
+          ))} */}
+
+        <ImageGallery delay={2200} />
+        <ImageGallery delay={2400} />
+        <ImageGallery delay={2600} />
+        <ImageGallery delay={2800} />
+        <ImageGallery delay={3000} />
       </div>
     </section>
   );
