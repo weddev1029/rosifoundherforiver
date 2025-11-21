@@ -2,11 +2,13 @@
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import { useRef } from "react";
 import ImageGallery from "@/components/image-gallery";
 
 gsap.registerPlugin(useGSAP); // register the hook to avoid React version discrepancies
+gsap.registerPlugin(ScrollTrigger);
 
 export function LoveInGallery() {
   const container = useRef(null);
@@ -14,6 +16,9 @@ export function LoveInGallery() {
   useGSAP(
     () => {
       gsap.to(".couple-image", {
+        scrollTrigger: {
+          trigger: container.current,
+        },
         keyframes: [
           { scale: 0.95, duration: 1.5, ease: "power1.inOut" },
           { scale: 1.0, duration: 1.5, ease: "power1.inOut" },
@@ -26,7 +31,7 @@ export function LoveInGallery() {
       });
     },
     { scope: container },
-  ); // <-- scope for selector text (optional)
+  );
 
   return (
     <section
