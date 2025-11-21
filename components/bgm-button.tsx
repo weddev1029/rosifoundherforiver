@@ -25,12 +25,10 @@ export default function BGMButton() {
           setIsPlaying(true);
           window.removeEventListener("click", enableAudio);
           window.removeEventListener("touchstart", enableAudio);
-          window.removeEventListener("scroll", enableAudio);
         };
 
         window.addEventListener("click", enableAudio);
         window.addEventListener("touchstart", enableAudio);
-        window.addEventListener("scroll", enableAudio);
       });
   }, []);
 
@@ -52,7 +50,11 @@ export default function BGMButton() {
       {/** biome-ignore lint/a11y/useMediaCaption: <I only need the audio> */}
       <audio ref={audioRef} src="/bgm/bgmv1.mp3" loop />
 
-      <Button onClick={toggleAudio} size={"icon-sm"}>
+      <Button
+        onClick={toggleAudio}
+        size={"icon-sm"}
+        className="bg-custom-primary cursor-pointer"
+      >
         {isPlaying ? <Pause /> : <Play />}
       </Button>
     </div>
