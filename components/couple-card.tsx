@@ -102,7 +102,7 @@ const CardDescription = ({
         ABOUT THE {isGroom ? "GROOM 🤵🏽" : "BRIDE 👰🏼"}
       </h6>
 
-      <div className="h-full scrollbar-thin max-h-20 sm:max-h-max overflow-y-auto text-xs lg:text-base xl:text-lg sm:space-y-2">
+      <div className="h-full scrollbar-thin max-h-20 sm:max-h-max overflow-y-auto text-[10px] xs:text-xs lg:text-base xl:text-lg space-y-2">
         {children}
       </div>
     </div>

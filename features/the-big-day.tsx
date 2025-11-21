@@ -19,7 +19,8 @@ export function TheBigDay() {
         </div>
 
         <p className="uppercase xl:text-2xl">
-          RECEPTION: E Jose Events Place & Resort 3pm
+          <span className="font-bold">RECEPTION:</span> E Jose Events Place &
+          Resort 3pm
         </p>
       </div>
     </section>

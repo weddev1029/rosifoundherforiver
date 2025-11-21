@@ -28,7 +28,9 @@ export function Footer() {
       </div>
 
       <div className="flex flex-col items-center gap-7 xl:gap-15">
-        <h2 className="text-center text-3xl">Tied by love, sealed for life.</h2>
+        <h2 className="text-center text-2xl xs:text-3xl">
+          Tied by love, sealed for life.
+        </h2>
 
         <div className="relative h-[38.59px] w-[182px] xl:w-[380px] xl:h-[80.73px]">
           <Image
