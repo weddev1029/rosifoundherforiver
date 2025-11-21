@@ -7,6 +7,7 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import BackToTop from "@/components/back-to-top";
+import BGMButton from "@/components/bgm-button";
 import { Toaster } from "@/components/ui/sonner";
 
 const playfairDisplay = Playfair_Display({
@@ -62,8 +63,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${playfairDisplay.variable} ${greatVibes.variable} ${inter.variable} ${abhayaLibre.variable} antialiased`}
+        className={`${playfairDisplay.variable} ${greatVibes.variable} ${inter.variable} ${abhayaLibre.variable} antialiased relative`}
       >
+        <BGMButton />
         {children}
         <Toaster position="top-center" />
         <BackToTop />
