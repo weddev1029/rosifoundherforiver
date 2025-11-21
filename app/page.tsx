@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="h-screen font-playfair-display bg-[url('/hero/hero-0.webp')] bg-cover bg-bottom-right">
+    <div className="h-screen font-playfair-display bg-[url('/hero/hero-0.jpg')] bg-cover bg-center">
       <div className="h-screen w-full grid place-content-center backdrop-brightness-50 text-white">
         <div className="grid place-items-center text-center space-y-6 lg:space-y-10">
           <div className="relative w-[247px] h-12 lg:w-[400px] lg:h-20">
@@ -17,10 +17,8 @@ export default function Home() {
           <span className="block uppercase text-3xl lg:text-5xl">
             You are invited to the Wedding of
           </span>
-          <h1 className="font-great-vibes capitalize text-6xl lg:text-8xl flex justify-center gap-6 xl:gap-10">
-            <p>Prince</p>
-            <p>&</p>
-            <p>Rosilyn</p>
+          <h1 className="font-great-vibes text-[56px] lg:text-[80px]">
+            John and Jane
           </h1>
           <Link
             href={"/invite"}

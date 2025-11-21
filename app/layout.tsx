@@ -5,8 +5,9 @@ import {
   Inter,
   Playfair_Display,
 } from "next/font/google";
-import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
+import BackToTop from "@/components/back-to-top";
+import { Toaster } from "@/components/ui/sonner";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
@@ -33,8 +34,8 @@ const abhayaLibre = Abhaya_Libre({
 });
 
 export const metadata: Metadata = {
-  title: "Price and Rosilyn's Wedding",
-  description: "Price and Rosi are getting married!",
+  title: "Jane and John Wedding",
+  description: "Jane and John are getting married!",
   applicationName: "The WedDev Team",
   authors: [{ name: "The WedDev Team", url: "https://mrklwnc.vercel.app" }],
   generator: "Next.js",
@@ -59,12 +60,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth" data-scroll-behavior="smooth">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${playfairDisplay.variable} ${greatVibes.variable} ${inter.variable} ${abhayaLibre.variable} antialiased relative`}
+        className={`${playfairDisplay.variable} ${greatVibes.variable} ${inter.variable} ${abhayaLibre.variable} antialiased`}
       >
         {children}
         <Toaster position="top-center" />
+        <BackToTop />
       </body>
     </html>
   );

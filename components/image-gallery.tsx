@@ -10,16 +10,16 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import { shuffle } from "@/lib/utils";
-import { loveInGallery } from "@/siteConfig";
+import { heroImages } from "@/siteConfig";
 
 export default function ImageGallery() {
-  const [images, setImages] = useState(loveInGallery);
+  const [images, setImages] = useState(heroImages);
 
   const MAX = 5000;
   const MIN = 4000;
 
   useEffect(() => {
-    setImages(shuffle([...loveInGallery]));
+    setImages(shuffle([...heroImages]));
   }, []);
 
   return (

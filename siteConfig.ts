@@ -1,94 +1,31 @@
 import type { TWeddingTimeline } from "./config/types";
 
 export const heroImages = [
-  // {
-  //   id: 1,
-  //   src: "/hero/hero-1.webp",
-  //   alt: "wedding-1",
-  // },
-  // {
-  //   id: 2,
-  //   src: "/hero/hero-2.webp",
-  //   alt: "wedding-2",
-  // },
-  // {
-  //   id: 3,
-  //   src: "/hero/hero-3.webp",
-  //   alt: "wedding-3",
-  // },
+  {
+    id: 1,
+    src: "/hero/hero-1.jpg",
+    alt: "wedding-1",
+  },
+  {
+    id: 2,
+    src: "/hero/hero-2.jpg",
+    alt: "wedding-2",
+  },
+  {
+    id: 3,
+    src: "/hero/hero-3.jpg",
+    alt: "wedding-3",
+  },
   {
     id: 4,
-    src: "/hero/hero-4.webp",
+    src: "/hero/hero-4.jpg",
     alt: "wedding-4",
-    className: "object-right",
   },
   {
     id: 5,
-    src: "/hero/hero-5.webp",
+    src: "/hero/hero-5.jpg",
     alt: "wedding-5",
   },
-];
-
-export const theBigDay = [
-  {
-    id: 10,
-    src: "/thebigday/bigday-1.webp",
-    alt: "wedding-10",
-  },
-  {
-    id: 11,
-    src: "/thebigday/bigday-2.webp",
-    alt: "wedding-11",
-  },
-  {
-    id: 12,
-    src: "/thebigday/bigday-3.webp",
-    alt: "wedding-12",
-  },
-];
-
-export const rsvpImages = [
-  {
-    id: 13,
-    src: "/rsvp/rsvp-1.webp",
-    alt: "wedding-13",
-  },
-  {
-    id: 14,
-    src: "/rsvp/rsvp-2.webp",
-    alt: "wedding-13",
-  },
-  {
-    id: 15,
-    src: "/rsvp/rsvp-3.webp",
-    alt: "wedding-13",
-  },
-];
-
-export const loveInGallery = [
-  ...heroImages,
-  {
-    id: 6,
-    src: "/lovegallery/lig1.webp",
-    alt: "wedding-6",
-  },
-  {
-    id: 7,
-    src: "/lovegallery/lig2.webp",
-    alt: "wedding-7",
-  },
-  {
-    id: 8,
-    src: "/lovegallery/lig3.webp",
-    alt: "wedding-8",
-  },
-  {
-    id: 9,
-    src: "/lovestory/ls3.webp",
-    alt: "wedding-9",
-  },
-  ...theBigDay,
-  ...rsvpImages,
 ];
 
 export const weddingDate = "2026-01-10T12:30:00"; // January 10, 2026, 12:30 PM

@@ -100,11 +100,6 @@ export function WeddingTimeline() {
 
             <SponsorContent>
               <div className="space-y-6 xl:space-y-2">
-                <p className="font-bold">Maid of Honor</p>
-                <p>Genevieve Argosino</p>
-              </div>
-
-              <div className="space-y-6 xl:space-y-2">
                 <p className="font-bold">Best Man</p>
                 <p>Jarlem Red de Peralta</p>
               </div>

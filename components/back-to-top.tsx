@@ -41,7 +41,7 @@ export default function BackToTop() {
       size={"icon"}
       onClick={topFunction}
       className={cn(
-        "fixed animate-bounce bottom-5 right-5 rounded-full z-99 mix-blend-difference cursor-pointer transition duration-300",
+        "fixed animate-bounce bottom-5 right-5 rounded-full z-99 mix-blend-difference bg-opacity-70 transition duration-300",
         style,
       )}
     >
