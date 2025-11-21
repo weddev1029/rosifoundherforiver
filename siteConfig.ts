@@ -1,21 +1,21 @@
 import type { TWeddingTimeline } from "./config/types";
 
 export const heroImages = [
-  // {
-  //   id: 1,
-  //   src: "/hero/hero-1.webp",
-  //   alt: "wedding-1",
-  // },
-  // {
-  //   id: 2,
-  //   src: "/hero/hero-2.webp",
-  //   alt: "wedding-2",
-  // },
-  // {
-  //   id: 3,
-  //   src: "/hero/hero-3.webp",
-  //   alt: "wedding-3",
-  // },
+  {
+    id: 1,
+    src: "/hero/hero-1.webp",
+    alt: "wedding-1",
+  },
+  {
+    id: 2,
+    src: "/hero/hero-2.webp",
+    alt: "wedding-2",
+  },
+  {
+    id: 3,
+    src: "/hero/hero-3.webp",
+    alt: "wedding-3",
+  },
   {
     id: 4,
     src: "/hero/hero-4.webp",
