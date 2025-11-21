@@ -46,12 +46,16 @@ export function Hero() {
         ))}
 
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-9999 text-center w-full">
-          <div className="grid gap-4 uppercase text-lg lg:text-3xl text-white">
-            <span>The Wedding of</span>
-            <h1 className="font-great-vibes capitalize text-6xl lg:text-8xl">
-              John & Jane
+          <div className="grid gap-4 xl:gap-8 uppercase text-lg lg:text-3xl text-white">
+            <span className="tracking-wider">The Wedding of</span>
+            <h1 className="font-great-vibes capitalize text-6xl lg:text-8xl flex justify-center gap-6 xl:gap-10">
+              <p>John</p>
+              <p>&</p>
+              <p>Jane</p>
             </h1>
-            <span>Saturday, 10 Jan 2026, 12:30 PM</span>
+            <span className="tracking-wider">
+              Saturday, 10 Jan 2026, 12:30 PM
+            </span>
           </div>
         </div>
 

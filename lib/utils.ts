@@ -19,3 +19,22 @@ export function calculateTimeLeft(countdownDate: number) {
 
   return { days, hours, minutes, seconds, distance };
 }
+
+export function shuffle<T>(array: T[]) {
+  let m = array.length;
+  let t: any;
+  let i: any;
+
+  // While there remain elements to shuffle…
+  while (m) {
+    // Pick a remaining element…
+    i = Math.floor(Math.random() * m--);
+
+    // And swap it with the current element.
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  }
+
+  return array;
+}
