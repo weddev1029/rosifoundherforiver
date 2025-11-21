@@ -112,24 +112,24 @@ export function LoveStory() {
       <div className="grid grid-cols-2 gap-x-4 gap-y-5 z-99 p-8 pb-0 lg:p-0">
         <div className="relative w-full aspect-square lg:w-40 xl:w-62">
           <Image
-            src="/hero/hero-0.jpg"
-            alt="hero-0"
+            src="/lovestory/ls1.webp"
+            alt="ls-1"
             fill
             className="object-cover object-center"
           />
         </div>
         <div className="relative w-full aspect-square lg:w-40 xl:w-62">
           <Image
-            src="/hero/hero-1.jpg"
-            alt="hero-1"
+            src="/lovestory/ls2.webp"
+            alt="ls-2"
             fill
             className="object-cover object-center"
           />
         </div>
         <div className="col-span-2 relative w-full aspect-video">
           <Image
-            src="/hero/hero-2.jpg"
-            alt="hero-2"
+            src="/lovestory/ls3.webp"
+            alt="ls-3"
             fill
             className="object-cover object-center"
           />
