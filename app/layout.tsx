@@ -33,8 +33,8 @@ const abhayaLibre = Abhaya_Libre({
 });
 
 export const metadata: Metadata = {
-  title: "Price and Rosilyn's Wedding",
-  description: "Price and Rosi are getting married!",
+  title: "Prince and Rosilyn's Wedding",
+  description: "Prince and Rosilyn are getting married!",
   applicationName: "The WedDev Team",
   authors: [{ name: "The WedDev Team", url: "https://mrklwnc.vercel.app" }],
   generator: "Next.js",
