@@ -13,8 +13,8 @@ export function Footer() {
           />
         </div>
 
-        <h3 className="text-4xl xl:text-6xl font-great-vibes text-center w-52 xl:w-96 leading-12 xl:leading-20">
-          John & Jane Wedding
+        <h3 className="text-4xl xl:text-6xl font-great-vibes text-center w-56 xl:w-96 leading-12 xl:leading-20">
+          Prince & Rosilyn Wedding
         </h3>
 
         <div className="relative w-15 h-[135px] xl:w-28 xl:h-64 flip-horizontal">
