@@ -6,7 +6,7 @@ export function GroomNBride() {
       <div className="px-4 md:px-0 backdrop-brightness-60 flex items-center justify-center gap-4 h-full md:gap-8 xl:gap-28">
         <CoupleCard
           url="/couple/groom.webp"
-          name="John Doe"
+          name="PRINCE IVERSON CASTRO"
           description="The Groom"
         >
           <p>
@@ -24,7 +24,7 @@ export function GroomNBride() {
 
         <CoupleCard
           url="/couple/bride.webp"
-          name="Jane Smith"
+          name="ROSILYN FORMENTERA"
           description="The Bride"
           isGroom={false}
         >

@@ -1,5 +1,5 @@
 import { SwiperCarousel, SwiperContent } from "@/components/swiper-carousel";
-import { theBigDay } from "@/siteConfig";
+import { theBigDay, weddingChurch } from "@/siteConfig";
 
 export function TheBigDay() {
   return (
@@ -14,13 +14,11 @@ export function TheBigDay() {
 
             <div className="uppercase space-y-5 xl:space-y-10">
               <h3 className="text-4xl xl:text-6xl font-great-vibes capitalize">
-                John & Jane Wedding
+                Prince & Rosilyn Wedding
               </h3>
 
               <div className="space-y-3 xl:space-y-6">
-                <p className="text-xl xl:text-3xl">
-                  Saint Anthony Abbot Parish Church
-                </p>
+                <p className="text-xl xl:text-3xl">{weddingChurch}</p>
 
                 <p className="text-xl xl:text-3xl">Jan 10, 2026 · 12:30 PM</p>
               </div>
