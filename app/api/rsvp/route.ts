@@ -22,9 +22,6 @@ export async function POST(req: NextRequest) {
   }
 
   body.timestamp = format(body.timestamp, "M/d/yyyy H:mm:ss");
-  body.isAttending = body.isAttending
-    ? "Yes, I'll be there"
-    : "Sorry, can't make it";
   body.comments = body.comments ? body.comments : "-";
 
   const service = await getGoogleSheetsClient();

@@ -1,13 +1,12 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Loader2, Send } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { RSVPFormSchema, sendRSVPForm, type TRSVPForm } from "@/config/api";
 import { weddingCalendarURL } from "@/siteConfig";
 import { Button } from "./ui/button";
-import { Checkbox } from "./ui/checkbox";
 import {
   Form,
   FormControl,
@@ -19,6 +18,7 @@ import {
 } from "./ui/form";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
+import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
 import { Textarea } from "./ui/textarea";
 
 export default function RSVPForm() {
@@ -26,7 +26,7 @@ export default function RSVPForm() {
     resolver: zodResolver(RSVPFormSchema),
     defaultValues: {
       timestamp: Date.now(),
-      isAttending: true,
+      attendance: "Yes, I'll be there",
       names: "",
       comments: "",
     },
@@ -59,25 +59,35 @@ export default function RSVPForm() {
       >
         <FormField
           control={form.control}
-          name="isAttending"
+          name="attendance"
           render={({ field }) => (
             <FormItem className="tracking-wide">
               <FormLabel className="text-lg xl:text-xl font-semibold after:ml-0.5 after:content-['*'] after:text-red-500">
                 CAN YOU ATTEND?
               </FormLabel>
               <FormControl>
-                <div className="flex items-center gap-2">
-                  <Checkbox
-                    id="attendee"
-                    defaultChecked
-                    checked={field.value}
-                    onCheckedChange={field.onChange}
-                    className="data-[state=checked]:bg-custom-primary data-[state=checked]:border-none"
-                  />
-                  <Label htmlFor="attendee" className="xl:text-xl">
-                    Yes, I'll be there
-                  </Label>
-                </div>
+                <RadioGroup
+                  className="sm:flex sm:gap-6"
+                  defaultValue="Yes, I'll be there"
+                  onValueChange={field.onChange}
+                >
+                  <div className="flex items-center gap-3">
+                    <RadioGroupItem
+                      value="Yes, I'll be there"
+                      id="yes"
+                      className="text-custom-primary"
+                    />
+                    <Label htmlFor="yes">Yes, I'll be there</Label>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <RadioGroupItem
+                      value="Sorry, can't make it"
+                      id="no"
+                      className="text-custom-primary"
+                    />
+                    <Label htmlFor="no">Sorry, can't make it</Label>
+                  </div>
+                </RadioGroup>
               </FormControl>
               <FormMessage />
             </FormItem>

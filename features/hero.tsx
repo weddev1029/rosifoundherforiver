@@ -11,7 +11,7 @@ export function Hero() {
         <SwiperContent>
           <div className="grid place-content-center h-full backdrop-brightness-60 gap-4 xl:gap-8 uppercase text-lg lg:text-3xl text-white text-center">
             <span className="tracking-wider">The Wedding of</span>
-            <h1 className="font-great-vibes capitalize text-6xl lg:text-8xl flex justify-center gap-6 xl:gap-10">
+            <h1 className="font-great-vibes capitalize text-5xl xs:text-6xl lg:text-8xl flex justify-center gap-4 xs:gap-6 xl:gap-10">
               <p>Prince</p>
               <p>&</p>
               <p>Rosilyn</p>

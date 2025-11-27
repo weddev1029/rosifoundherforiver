@@ -1,61 +1,34 @@
 "use client";
 
-import { Pause, Play } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { Volume2, VolumeOff } from "lucide-react";
+import { useState } from "react";
+import useSound from "use-sound";
 import { Button } from "./ui/button";
 
 export default function BGMButton() {
-  const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-
-  useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio) return;
-
-    // Attempt autoplay (usually blocked)
-    audio
-      .play()
-      .then(() => {
-        setIsPlaying(true);
-      })
-      .catch(() => {
-        // Autoplay blocked -> wait for first user interaction
-        const enableAudio = () => {
-          audio.play();
-          setIsPlaying(true);
-          window.removeEventListener("click", enableAudio);
-          window.removeEventListener("touchstart", enableAudio);
-        };
-
-        window.addEventListener("click", enableAudio);
-        window.addEventListener("touchstart", enableAudio);
-      });
-  }, []);
+  const [play, { pause }] = useSound("/bgm/bgmv1.mp3", {
+    onend: () => setIsPlaying(false),
+  });
 
   const toggleAudio = () => {
-    const audio = audioRef.current;
-    if (!audio) return;
-
     if (isPlaying) {
-      audio.pause();
+      pause();
       setIsPlaying(false);
     } else {
-      audio.play();
+      play();
       setIsPlaying(true);
     }
   };
 
   return (
-    <div className="fixed top-4 right-4 z-50">
-      {/** biome-ignore lint/a11y/useMediaCaption: <I only need the audio> */}
-      <audio ref={audioRef} src="/bgm/bgmv1.mp3" loop />
-
+    <div className="fixed top-4 lg:top-auto lg:bottom-36 left-4 z-50">
       <Button
         onClick={toggleAudio}
-        size={"icon-sm"}
+        size={"icon-lg"}
         className="bg-custom-primary cursor-pointer"
       >
-        {isPlaying ? <Pause /> : <Play />}
+        {isPlaying ? <Volume2 /> : <VolumeOff />}
       </Button>
     </div>
   );

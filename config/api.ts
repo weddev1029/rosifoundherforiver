@@ -3,7 +3,7 @@ import { z } from "zod";
 
 export const RSVPFormSchema = z.object({
   timestamp: z.number(),
-  isAttending: z.boolean(),
+  attendance: z.string().min(1, "Required Field"),
   names: z.string().min(1, "Required Field").trim(),
   comments: z
     .string()

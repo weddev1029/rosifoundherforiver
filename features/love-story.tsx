@@ -24,63 +24,51 @@ export function LoveStory() {
 
   useGSAP(
     () => {
-      // biome-ignore lint/suspicious/useIterableCallbackReturn: <No return here>
-      storyRefs.current.map((story) => {
+      // Create timeline for each section
+      const tl = gsap.timeline({
+        defaults: { ease: "none" },
+        scrollTrigger: {
+          trigger: ".love-story",
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
+
+      storyRefs.current.forEach((story, index) => {
         const titleEl = story.querySelector(".title") as HTMLElement;
         const storyEl = story.querySelector(".story") as HTMLElement;
 
         if (!titleEl || !storyEl) return;
 
-        // Create timeline for each section
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: story,
-            start: "top 60%",
-          },
+        // Use SplitType to split the text into individual characters
+        const titleSplit = SplitText.create(titleEl, { type: "words, chars" });
+        const storySplit = SplitText.create(storyEl, { type: "words, chars" });
+
+        // Initially hide all characters
+        gsap.set([titleSplit.chars, storySplit.chars], { autoAlpha: 0 });
+
+        // Create a separate timeline for this specific story item
+        const storyTl = gsap.timeline();
+
+        // **A. Animate the title (typing effect)**
+        storyTl.to(titleSplit.chars, {
+          autoAlpha: 1, // Make characters visible
+          duration: 0.5, // Speed of typing
+          stagger: 0.02, // Delay between each character
         });
 
-        // Split into characters
-        SplitText.create(titleEl, {
-          type: "words, chars",
-          autoSplit: true,
-          onSplit: (self) => {
-            return tl.from(self.chars, {
-              autoAlpha: 0,
-              duration: 0.05,
-              stagger: {
-                each: 0.04, // pause between each character
-                from: "start",
-              },
-              ease: "none",
-            });
-          },
+        // **B. Animate the story (typing effect)**
+        storyTl.to(storySplit.chars, {
+          autoAlpha: 1,
+          duration: 0.02,
+          stagger: 0.015,
         });
 
-        SplitText.create(storyEl, {
-          type: "words, chars",
-          autoSplit: true,
-          onSplit: (self) => {
-            return tl.from(
-              self.chars,
-              {
-                autoAlpha: 0,
-                duration: 0.04,
-                stagger: {
-                  each: 0.03,
-                  from: "start",
-                  amount: 0.0,
-                  // OPTIONAL: jitter for natural typing
-                  ease: "none",
-                },
-                ease: "none",
-              },
-              "+=0.4", // Delay in which the story should start animating after title
-            );
-          },
-        });
+        // Add the individual story's timeline to the master timeline
+        tl.add(storyTl, `+=${index > 0 ? 0.5 : 0}`); // Add a slight delay (0.5s) between stories, but no delay before the first one
       });
     },
-    { scope: containerRef, dependencies: [storyRefs] },
+    { scope: containerRef, dependencies: [] },
   );
 
   return (
@@ -162,7 +150,9 @@ export function LoveStory() {
                 <h5 className="font-semibold tracking-wide text-xl title">
                   {story.title}
                 </h5>
-                <p className="leading-relaxed story">{story.story}</p>
+                <p className="leading-relaxed story text-justify">
+                  {story.story}
+                </p>
               </div>
             ))}
           </div>
