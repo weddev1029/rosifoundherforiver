@@ -1,3 +1,5 @@
+import { cn } from "./utils";
+
 export const CalendarIcon = () => {
   return (
     <svg
@@ -18,7 +20,7 @@ export const CalendarIcon = () => {
   );
 };
 
-export const FacebookIcon = () => {
+export const FacebookIcon = ({ className }: { className?: string }) => {
   return (
     <svg
       width="29"
@@ -26,7 +28,10 @@ export const FacebookIcon = () => {
       viewBox="0 0 29 29"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="fill-current hover:fill-white transition-colors"
+      className={cn(
+        "fill-current hover:fill-white transition-colors",
+        className,
+      )}
     >
       <title>Facebook Icon</title>
       <path d="M28.4734 14.3249C28.4734 6.41327 22.0993 0 14.2375 0C6.37217 0.00177949 -0.00195312 6.41327 -0.00195312 14.3267C-0.00195312 21.4749 5.20483 27.4005 12.0096 28.4754V18.4657H8.39723V14.3267H12.0131V11.1681C12.0131 7.57884 14.1396 5.59649 17.3908 5.59649C18.9496 5.59649 20.5778 5.87587 20.5778 5.87587V9.39925H18.7823C17.0153 9.39925 16.4636 10.5043 16.4636 11.6378V14.3249H20.4105L19.7806 18.464H16.4619V28.4736C23.2666 27.3988 28.4734 21.4731 28.4734 14.3249Z" />

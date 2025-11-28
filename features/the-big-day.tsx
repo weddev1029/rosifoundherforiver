@@ -13,8 +13,8 @@ export function TheBigDay() {
             <h3 className="text-4xl xl:text-6xl tracking-wide">The Big Day</h3>
 
             <div className="uppercase space-y-5 xl:space-y-10">
-              <h3 className="text-4xl xl:text-6xl font-great-vibes capitalize">
-                Prince & Rosilyn Wedding
+              <h3 className="text-4xl xl:text-6xl px-3 xs:px-0 font-great-vibes capitalize">
+                Prince & Rosilyn's Wedding
               </h3>
 
               <div className="space-y-3 xl:space-y-6">

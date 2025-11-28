@@ -9,6 +9,7 @@ import {
   LoveStory,
   RSVP,
   TheBigDay,
+  TiedByLoveSealedForLife,
   WeddingTimeline,
 } from "@/features";
 
@@ -25,6 +26,7 @@ export default function Invitation() {
       <DressCode />
       <RSVP />
       <RemainingDays isFloating={false} />
+      <TiedByLoveSealedForLife />
       <Footer />
     </div>
   );

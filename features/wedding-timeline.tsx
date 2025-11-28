@@ -16,7 +16,7 @@ export function WeddingTimeline() {
       </h2>
 
       <div className="flex flex-col gap-16 xl:flex-row xl:justify-center xl:gap-0">
-        <div className="relative order-1 xl:order-0 rounded-2xl border shadow-xl px-5 py-8 text-sm md:text-base m-4 xl:max-w-2xl grid gap-y-16 lg:grid-cols-2 lg:gap-y-12">
+        <div className="relative order-1 xl:order-0 rounded-2xl border shadow-xl px-5 py-8 text-sm md:text-base m-4 xl:m-0 xl:mr-4 xl:max-w-2xl grid gap-y-16 lg:grid-cols-2 lg:gap-y-12">
           <SponsorWrapper className="lg:order-last">
             <SponsorTitle>Parents</SponsorTitle>
 
@@ -181,7 +181,7 @@ export function WeddingTimeline() {
             </SponsorContent>
           </SponsorWrapper>
 
-          <div className="absolute -top-8 -left-8 xl:-top-18 xl:-left-18">
+          <div className="absolute -top-8 -left-8 xl:-top-18 xl:-left-18 -z-99">
             <div className="relative w-26 h-26 xl:w-52 xl:h-52">
               <Image
                 alt="border-ornaments"
@@ -242,7 +242,7 @@ export function WeddingTimeline() {
             <span className="absolute bg-custom-secondary-3 rounded-full w-3 h-3 -start-2 -bottom-1"></span>
           </li>
 
-          <div className="absolute -bottom-2 -right-4 xl:-bottom-12 xl:-right-12">
+          <div className="absolute -bottom-2 -right-4 xl:-bottom-12 xl:-right-12 -z-99">
             <div className="relative w-26 h-26 xl:w-52 xl:h-52 rotate-180">
               <Image
                 alt="border-ornaments"

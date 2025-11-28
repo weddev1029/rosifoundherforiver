@@ -1,46 +1,19 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="h-[363px] xl:h-[540px] bg-custom-secondary-3 grid place-content-center gap-7 text-white">
-      <div className="flex items-center gap-6">
-        <div className="relative w-15 h-[135px] xl:w-28 xl:h-64">
-          <Image
-            src="/svg/fern-ornament.svg"
-            alt="fern"
-            fill
-            className="object-contain object-center"
-          />
-        </div>
-
-        <h3 className="text-4xl xl:text-6xl font-great-vibes text-center w-56 xl:w-96 leading-12 xl:leading-20">
-          Prince & Rosilyn Wedding
-        </h3>
-
-        <div className="relative w-15 h-[135px] xl:w-28 xl:h-64 flip-horizontal">
-          <Image
-            src="/svg/fern-ornament.svg"
-            alt="fern"
-            fill
-            className="object-contain object-center"
-          />
-        </div>
-      </div>
-
-      <div className="flex flex-col items-center gap-7 xl:gap-15">
-        <h2 className="text-center text-2xl xs:text-3xl">
-          Tied by love, sealed for life.
-        </h2>
-
-        <div className="relative h-[38.59px] w-[182px] xl:w-[380px] xl:h-[80.73px]">
-          <Image
-            src="/svg/background-ornament.svg"
-            alt="fern"
-            fill
-            className="object-contain object-center"
-          />
-        </div>
-      </div>
+    <footer className="font-archivo bg-footer text-[#B0B0B0] py-6">
+      <h5 className="text-center text-[10px] xs:text-xs sm:text-base">
+        © 2025 By Prince & Rosilyn. Preserved digitally by&nbsp;
+        <Link
+          href="https://www.facebook.com/profile.php?id=61584197138941"
+          className="underline underline-offset-2 hover:underline-offset-8 transition-all hover:text-custom-primary"
+          target="_blank"
+          referrerPolicy="no-referrer"
+        >
+          DigiTale Works
+        </Link>
+      </h5>
     </footer>
   );
 }
