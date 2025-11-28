@@ -7,4 +7,5 @@ export { LoveInGallery } from "./love-in-gallery";
 export { LoveStory } from "./love-story";
 export { RSVP } from "./rsvp";
 export { TheBigDay } from "./the-big-day";
+export { TiedByLoveSealedForLife } from "./tied-by-love-sealed-for-life";
 export { WeddingTimeline } from "./wedding-timeline";

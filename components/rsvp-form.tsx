@@ -67,25 +67,29 @@ export default function RSVPForm() {
               </FormLabel>
               <FormControl>
                 <RadioGroup
-                  className="sm:flex sm:gap-6"
+                  className="sm:flex"
                   defaultValue="Yes, I'll be there"
                   onValueChange={field.onChange}
                 >
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-2">
                     <RadioGroupItem
                       value="Yes, I'll be there"
                       id="yes"
                       className="text-custom-primary"
                     />
-                    <Label htmlFor="yes">Yes, I'll be there</Label>
+                    <Label htmlFor="yes" className="sm:text-base">
+                      Yes, I'll be there
+                    </Label>
                   </div>
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-2">
                     <RadioGroupItem
                       value="Sorry, can't make it"
                       id="no"
                       className="text-custom-primary"
                     />
-                    <Label htmlFor="no">Sorry, can't make it</Label>
+                    <Label htmlFor="no" className="sm:text-base">
+                      Sorry, can't make it
+                    </Label>
                   </div>
                 </RadioGroup>
               </FormControl>
@@ -106,6 +110,7 @@ export default function RSVPForm() {
                 <Input
                   {...field}
                   required
+                  autoComplete="off"
                   onChange={field.onChange}
                   className="text-dresscode-5 rounded-none bg-dresscode-4 border-none focus-visible:ring-custom-primary/50"
                 />
@@ -133,7 +138,7 @@ export default function RSVPForm() {
                 />
               </FormControl>
               <FormDescription className="text-white">
-                {field.value ? field.value.length : 0} / 100 character
+                {field.value ? field.value.length : 0} / 100 characters
               </FormDescription>
               <FormMessage className="text-red-100" />
             </FormItem>

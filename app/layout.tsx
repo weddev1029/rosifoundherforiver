@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import {
   Abhaya_Libre,
+  Archivo,
   Great_Vibes,
   Inter,
   Playfair_Display,
@@ -29,6 +30,12 @@ const inter = Inter({
 const abhayaLibre = Abhaya_Libre({
   variable: "--font-abhaya-libre",
   weight: ["400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+});
+
+const archivo = Archivo({
+  variable: "--font-archivo",
+  weight: ["300", "400", "700"],
   subsets: ["latin"],
 });
 
@@ -61,7 +68,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" data-scroll-behavior="smooth">
       <body
-        className={`${playfairDisplay.variable} ${greatVibes.variable} ${inter.variable} ${abhayaLibre.variable} antialiased relative`}
+        className={`${playfairDisplay.variable} ${greatVibes.variable} ${inter.variable} ${abhayaLibre.variable} ${archivo.variable} antialiased relative`}
       >
         {children}
         <Toaster position="top-center" />

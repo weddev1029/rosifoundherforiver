@@ -13,12 +13,14 @@ export function RSVP() {
       <SwiperContent>
         <div className="h-full backdrop-brightness-60 flex flex-col items-center justify-center gap-10 text-white">
           <div className="space-y-6.5 text-center">
-            <h3 className="text-[32px] tracking-wide">
-              <span className="text-[42px] font-great-vibes">Confirmation</span>{" "}
+            <h3 className="text-2xl sm:text-[32px] tracking-wide">
+              <span className="text-4xl sm:text-[42px] font-great-vibes">
+                Confirmation
+              </span>{" "}
               RSVP
             </h3>
 
-            <p className="max-w-2xl text-xl px-12">
+            <p className="max-w-2xl text-sm px-4 sm:text-xl sm:px-12">
               We can&apos;t wait to celebrate with you! Please take a moment to
               let us know you&apos;re coming by completing our RSVP form.
             </p>
@@ -30,7 +32,7 @@ export function RSVP() {
             <div className="flex gap-10">
               <RSVPForm />
 
-              <div className="w-1/2 hidden lg:block space-y-7">
+              <div className="w-1/2 hidden lg:block space-y-7 lg:py-6">
                 <Info icon={<Church size={28} />}>
                   <Link
                     href="https://maps.app.goo.gl/pPcPyqfdj4j6bgSi7"
