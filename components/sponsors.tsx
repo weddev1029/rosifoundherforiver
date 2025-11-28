@@ -39,7 +39,7 @@ function SponsorContent({
   return (
     <div
       className={cn(
-        "text-center text-lg xl:text-sm tracking-wide space-y-8 xl:space-y-6",
+        "text-center text-lg xl:text-sm tracking-wide space-y-8 xl:space-y-6 text-pretty",
         className,
       )}
     >

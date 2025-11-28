@@ -117,9 +117,9 @@ const CardFooter = ({
   description: string;
 }) => {
   return (
-    <div className="uppercase text-center text-black text-sm lg:space-y-2 py-2 lg:py-6">
+    <div className="uppercase text-center text-black text-xs xs:text-sm lg:space-y-2 py-2 lg:py-6">
       <p className="font-semibold lg:text-3xl">{name}</p>
-      <span className="lg:text-2xl">{description}</span>
+      <span className="text-xs lg:text-2xl">{description}</span>
     </div>
   );
 };
