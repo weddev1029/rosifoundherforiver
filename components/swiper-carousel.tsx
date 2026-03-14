@@ -45,13 +45,16 @@ function SwiperCarousel({
       {images.map((image) => (
         <SwiperSlide
           key={image.id}
-          className="relative max-h-screen aspect-video"
+          className="relative min-h-screen aspect-video"
         >
           <Image
             alt={image.alt}
             src={image.src}
             fill
-            className={cn("object-cover brightness-50", image.className)}
+            className={cn(
+              "object-cover object-center brightness-50",
+              image.className,
+            )}
           />
         </SwiperSlide>
       ))}

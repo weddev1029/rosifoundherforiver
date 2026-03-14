@@ -12,8 +12,11 @@ import {
   TiedByLoveSealedForLife,
   WeddingTimeline,
 } from "@/features";
+import { weddingDate } from "@/siteConfig";
 
 export default function Invitation() {
+  const difference = new Date(weddingDate).getTime() - Date.now();
+
   return (
     <div className="min-h-screen font-playfair-display overflow-hidden">
       <Hero />
@@ -24,8 +27,12 @@ export default function Invitation() {
       <LoveStory />
       <TheBigDay />
       <DressCode />
-      <RSVP />
-      <RemainingDays isFloating={false} />
+      {difference > 0 && (
+        <>
+          <RSVP />
+          <RemainingDays isFloating={false} />
+        </>
+      )}
       <TiedByLoveSealedForLife />
       <Footer />
     </div>
